@@ -79,7 +79,7 @@ jobs:
         find _dist/wiki/ -printf "%P\n" | tar -czf wiki-js.tar.gz --no-recursion -C _dist/wiki/ -T -
 
     - name: Upload a Build Artifact
-      uses: actions/upload-artifact@v7
+      uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7
       with:
         name: drop
         path: wiki-js.tar.gz
@@ -186,7 +186,7 @@ jobs:
       run: tar -czf $env:GITHUB_WORKSPACE\wiki-js-windows.tar.gz -C $env:GITHUB_WORKSPACE\win .
 
     - name: Upload a Build Artifact
-      uses: actions/upload-artifact@v7
+      uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7
       with:
         name: drop-win
         path: wiki-js-windows.tar.gz
