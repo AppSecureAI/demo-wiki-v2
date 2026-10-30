@@ -78,6 +78,7 @@ module.exports = async () => {
 
   app.use(cookieParser())
   app.use(session({
+    name: 'sid',
     secret: WIKI.config.sessionSecret,
     resave: false,
     saveUninitialized: false,
